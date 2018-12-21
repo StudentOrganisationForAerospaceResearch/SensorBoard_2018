@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L SensorBoard:MS5607-02BA U?
+L SensorBoard-rescue:MS5607-02BA-SensorBoard U?
 U 1 1 5BFAF6AC
 P 1825 1850
 F 0 "U?" H 2875 1850 50  0000 C CNN
@@ -63,7 +63,7 @@ Wire Wire Line
 Text Label 1025 925  0    50   ~ 0
 VDD+3V
 $Comp
-L SensorBoard:BMF055 U?
+L SensorBoard-rescue:BMF055-SensorBoard U?
 U 1 1 5C02E18B
 P 2675 4725
 F 0 "U?" H 3200 3825 50  0000 L CNN
@@ -289,6 +289,17 @@ F 1 "GND" H 8505 2452 50  0000 C CNN
 F 2 "" H 8500 2625 50  0001 C CNN
 F 3 "" H 8500 2625 50  0001 C CNN
 	1    8500 2625
+	1    0    0    -1  
+$EndComp
+$Comp
+L MCU_ST_STM32F4:STM32F405RGTx U?
+U 1 1 5C1DE3B9
+P 5550 4950
+F 0 "U?" H 4950 6700 50  0000 L CNN
+F 1 "STM32F405RGTx" H 5950 6700 50  0000 L CNN
+F 2 "Package_QFP:LQFP-64_10x10mm_P0.5mm" H 4950 3250 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00037051.pdf" H 5550 4950 50  0001 C CNN
+	1    5550 4950
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
