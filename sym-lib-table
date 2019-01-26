@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name SensorBoard)(type Legacy)(uri /Users/justinknudsen/Documents/PCB/SensorBoard/SensorBoard.lib)(options "")(descr ""))
+  (lib (name SensorBoard-rescue)(type Legacy)(uri ${KIPRJMOD}/SensorBoard-rescue.lib)(options "")(descr ""))
 )

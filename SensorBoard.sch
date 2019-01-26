@@ -4,291 +4,32 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
-Title ""
-Date ""
-Rev ""
-Comp ""
-Comment1 ""
+Sheet 1 4
+Title "SOAR Sensor Board"
+Date "2018-30-12"
+Rev "1"
+Comp "SOAR"
+Comment1 "Justin Knudsen & Nathan Morton "
 Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L SensorBoard:MS5607-02BA U?
-U 1 1 5BFAF6AC
-P 1825 1850
-F 0 "U?" H 2875 1850 50  0000 C CNN
-F 1 "MS5607-02BA" H 2175 2250 50  0000 C CNN
-F 2 "" H 1825 1850 50  0001 C CNN
-F 3 "" H 1825 1850 50  0001 C CNN
-	1    1825 1850
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1375 1400 1275 1400
-Wire Wire Line
-	1025 1400 1025 925 
-Wire Wire Line
-	1375 1250 1275 1250
-Wire Wire Line
-	1275 1250 1275 1400
-Connection ~ 1275 1400
-Wire Wire Line
-	1275 1400 1025 1400
-Wire Wire Line
-	1375 1550 1275 1550
-Wire Wire Line
-	1275 1550 1275 1400
-$Comp
-L Device:C C?
-U 1 1 5BFB02FB
-P 1025 1600
-F 0 "C?" H 1140 1646 50  0000 L CNN
-F 1 "C" H 1140 1555 50  0000 L CNN
-F 2 "" H 1063 1450 50  0001 C CNN
-F 3 "~" H 1025 1600 50  0001 C CNN
-	1    1025 1600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1025 1450 1025 1400
-Connection ~ 1025 1400
-Wire Wire Line
-	1025 1750 1275 1750
-Wire Wire Line
-	1275 1750 1275 1700
-Wire Wire Line
-	1275 1700 1375 1700
-Text Label 1025 925  0    50   ~ 0
-VDD+3V
-$Comp
-L SensorBoard:BMF055 U?
-U 1 1 5C02E18B
-P 2675 4725
-F 0 "U?" H 3200 3825 50  0000 L CNN
-F 1 "BMF055" H 2450 4550 50  0000 L CNN
-F 2 "" H 2675 4725 50  0001 C CNN
-F 3 "" H 2675 4725 50  0001 C CNN
-	1    2675 4725
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C?
-U 1 1 5C0326AA
-P 2175 3725
-F 0 "C?" V 1923 3725 50  0000 C CNN
-F 1 "120n" V 2014 3725 50  0000 C CNN
-F 2 "" H 2213 3575 50  0001 C CNN
-F 3 "~" H 2175 3725 50  0001 C CNN
-	1    2175 3725
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:C C?
-U 1 1 5C032843
-P 2175 3325
-F 0 "C?" V 1923 3325 50  0000 C CNN
-F 1 "6.8n" V 2014 3325 50  0000 C CNN
-F 2 "" H 2213 3175 50  0001 C CNN
-F 3 "~" H 2175 3325 50  0001 C CNN
-	1    2175 3325
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	1125 3225 1125 4825
-Wire Wire Line
-	2025 3325 1825 3325
-Connection ~ 1025 3325
-Wire Wire Line
-	1025 3325 1025 5700
-Wire Wire Line
-	1825 3325 1825 3725
-Wire Wire Line
-	1825 3725 2025 3725
-Connection ~ 1825 3325
-Wire Wire Line
-	1825 3325 1025 3325
-Wire Wire Line
-	1825 3725 1825 3975
-Wire Wire Line
-	1825 3975 2175 3975
-Wire Wire Line
-	2175 3975 2175 4175
-Connection ~ 1825 3725
-Wire Wire Line
-	1125 4825 1475 4825
-$Comp
-L Device:C C?
-U 1 1 5C033E64
-P 1475 4575
-F 0 "C?" H 1590 4621 50  0000 L CNN
-F 1 "C" H 1590 4530 50  0000 L CNN
-F 2 "" H 1513 4425 50  0001 C CNN
-F 3 "~" H 1475 4575 50  0001 C CNN
-	1    1475 4575
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1475 4725 1475 4825
-Connection ~ 1475 4825
-Wire Wire Line
-	1475 4825 1875 4825
-Wire Wire Line
-	2325 3725 3825 3725
-Wire Wire Line
-	3825 3725 3825 5975
-Wire Wire Line
-	3825 5975 3100 5975
-Wire Wire Line
-	1725 5975 1725 4675
-Wire Wire Line
-	1725 4675 1875 4675
-Wire Wire Line
-	1725 4675 1725 4225
-Wire Wire Line
-	1725 4225 1475 4225
-Wire Wire Line
-	1475 4225 1475 4425
-Connection ~ 1725 4675
-$Comp
-L Device:C C?
-U 1 1 5C035882
-P 2375 5825
-F 0 "C?" H 2490 5871 50  0000 L CNN
-F 1 "C" H 2490 5780 50  0000 L CNN
-F 2 "" H 2413 5675 50  0001 C CNN
-F 3 "~" H 2375 5825 50  0001 C CNN
-	1    2375 5825
-	1    0    0    -1  
-$EndComp
-Connection ~ 2375 5975
-Wire Wire Line
-	2375 5975 1725 5975
-Wire Wire Line
-	2625 5675 2625 6125
-Wire Wire Line
-	1025 6125 2625 6125
-Wire Wire Line
-	2525 4175 2525 3325
-Wire Wire Line
-	2525 3325 2325 3325
-$Comp
-L Device:R R?
-U 1 1 5C03679C
-P 1025 5850
-F 0 "R?" H 1095 5896 50  0000 L CNN
-F 1 "R" H 1095 5805 50  0000 L CNN
-F 2 "" V 955 5850 50  0001 C CNN
-F 3 "~" H 1025 5850 50  0001 C CNN
-	1    1025 5850
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1025 6000 1025 6125
-$Comp
-L power:GND #PWR?
-U 1 1 5C036899
-P 3100 5975
-F 0 "#PWR?" H 3100 5725 50  0001 C CNN
-F 1 "GND" H 3105 5802 50  0000 C CNN
-F 2 "" H 3100 5975 50  0001 C CNN
-F 3 "" H 3100 5975 50  0001 C CNN
-	1    3100 5975
-	1    0    0    -1  
-$EndComp
-Connection ~ 3100 5975
-Wire Wire Line
-	3100 5975 2375 5975
-Wire Wire Line
-	1025 6125 825  6125
-Connection ~ 1025 6125
-Text Notes 2000 1000 0    50   ~ 0
-Barometer 
-Text Notes 2175 2850 0    50   ~ 0
-IMU
-Text Label 1025 3075 0    50   ~ 0
-VDDIO
-Wire Wire Line
-	1025 3075 1025 3325
-Text Notes 7300 1000 0    50   ~ 0
-SD Card 
-$Comp
-L Connector:Micro_SD_Card J?
-U 1 1 5C039E65
-P 7475 1900
-F 0 "J?" H 7425 2617 50  0000 C CNN
-F 1 "Micro_SD_Card" H 7425 2526 50  0000 C CNN
-F 2 "" H 8625 2200 50  0001 C CNN
-F 3 "http://katalog.we-online.de/em/datasheet/693072010801.pdf" H 7475 1900 50  0001 C CNN
-	1    7475 1900
-	1    0    0    -1  
-$EndComp
-Text Label 1125 3225 0    50   ~ 0
-VDD
-Wire Wire Line
-	8275 2500 8500 2500
-Wire Wire Line
-	8500 2500 8500 2625
-Wire Wire Line
-	6575 2100 5675 2100
-Wire Wire Line
-	5675 2100 5675 2450
-$Comp
-L power:GND #PWR?
-U 1 1 5C03AF53
-P 5675 2450
-F 0 "#PWR?" H 5675 2200 50  0001 C CNN
-F 1 "GND" H 5680 2277 50  0000 C CNN
-F 2 "" H 5675 2450 50  0001 C CNN
-F 3 "" H 5675 2450 50  0001 C CNN
-	1    5675 2450
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5C03AF97
-P 5100 1950
-F 0 "#PWR?" H 5100 1700 50  0001 C CNN
-F 1 "GND" H 5105 1777 50  0000 C CNN
-F 2 "" H 5100 1950 50  0001 C CNN
-F 3 "" H 5100 1950 50  0001 C CNN
-	1    5100 1950
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C?
-U 1 1 5C03AFF0
-P 5100 1800
-F 0 "C?" H 5215 1846 50  0000 L CNN
-F 1 "10u" H 5215 1755 50  0000 L CNN
-F 2 "" H 5138 1650 50  0001 C CNN
-F 3 "~" H 5100 1800 50  0001 C CNN
-	1    5100 1800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5100 1650 5100 1375
-Wire Wire Line
-	5100 1375 5950 1375
-Wire Wire Line
-	5950 1375 5950 1900
-Wire Wire Line
-	5950 1900 6575 1900
-Wire Wire Line
-	5950 1375 5950 1275
-Connection ~ 5950 1375
-Text Label 5950 1275 0    50   ~ 0
-+3.3V
-$Comp
-L power:GND #PWR?
-U 1 1 5C03C33A
-P 8500 2625
-F 0 "#PWR?" H 8500 2375 50  0001 C CNN
-F 1 "GND" H 8505 2452 50  0000 C CNN
-F 2 "" H 8500 2625 50  0001 C CNN
-F 3 "" H 8500 2625 50  0001 C CNN
-	1    8500 2625
-	1    0    0    -1  
-$EndComp
+$Sheet
+S 6100 4200 2250 1075
+U 5C38EC7F
+F0 "Sensors" 50
+F1 "Sensors.sch" 50
+$EndSheet
+$Sheet
+S 6050 2275 2300 975 
+U 5C392A6A
+F0 "MCU (copy)" 50
+F1 "MCU (copy).sch" 50
+$EndSheet
+$Sheet
+S 2500 4225 2325 1050
+U 5C3A89E7
+F0 "Battery_and_Power" 50
+F1 "Battery_and_Power.sch" 50
+$EndSheet
 $EndSCHEMATC

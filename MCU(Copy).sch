@@ -1,0 +1,349 @@
+EESchema Schematic File Version 4
+LIBS:SensorBoard-cache
+LIBS:MCU-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text Notes 8250 800  0    50   ~ 0
+SD Card 
+$Comp
+L Connector:Micro_SD_Card J?
+U 1 1 5C38F89D
+P 8425 1700
+AR Path="/5C38F89D" Ref="J?"  Part="1" 
+AR Path="/5C38EC7F/5C38F89D" Ref="J?"  Part="1" 
+F 0 "J?" H 8375 2417 50  0000 C CNN
+F 1 "Micro_SD_Card" H 8375 2326 50  0000 C CNN
+F 2 "SensorBoard:SD Card, Molex 0472192001" H 9575 2000 50  0001 C CNN
+F 3 "http://katalog.we-online.de/em/datasheet/693072010801.pdf" H 8425 1700 50  0001 C CNN
+	1    8425 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9225 2300 9450 2300
+Wire Wire Line
+	9450 2300 9450 2425
+Wire Wire Line
+	7525 1900 6625 1900
+Wire Wire Line
+	6625 1900 6625 2250
+$Comp
+L power:GND #PWR?
+U 1 1 5C38F8A8
+P 6625 2250
+AR Path="/5C38F8A8" Ref="#PWR?"  Part="1" 
+AR Path="/5C38EC7F/5C38F8A8" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 6625 2000 50  0001 C CNN
+F 1 "GND" H 6630 2077 50  0000 C CNN
+F 2 "" H 6625 2250 50  0001 C CNN
+F 3 "" H 6625 2250 50  0001 C CNN
+	1    6625 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C38F8AE
+P 6050 1750
+AR Path="/5C38F8AE" Ref="#PWR?"  Part="1" 
+AR Path="/5C38EC7F/5C38F8AE" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 6050 1500 50  0001 C CNN
+F 1 "GND" H 6055 1577 50  0000 C CNN
+F 2 "" H 6050 1750 50  0001 C CNN
+F 3 "" H 6050 1750 50  0001 C CNN
+	1    6050 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5C38F8B4
+P 6050 1600
+AR Path="/5C38F8B4" Ref="C?"  Part="1" 
+AR Path="/5C38EC7F/5C38F8B4" Ref="C?"  Part="1" 
+F 0 "C?" H 6165 1646 50  0000 L CNN
+F 1 "10u" H 6165 1555 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6088 1450 50  0001 C CNN
+F 3 "~" H 6050 1600 50  0001 C CNN
+	1    6050 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 1450 6050 1175
+Wire Wire Line
+	6050 1175 6675 1175
+Wire Wire Line
+	6900 1175 6900 1700
+Wire Wire Line
+	6900 1700 7525 1700
+Wire Wire Line
+	6900 1175 6900 1075
+Connection ~ 6900 1175
+Text Label 6900 1075 0    50   ~ 0
++3.3V
+$Comp
+L power:GND #PWR?
+U 1 1 5C38F8C2
+P 9450 2425
+AR Path="/5C38F8C2" Ref="#PWR?"  Part="1" 
+AR Path="/5C38EC7F/5C38F8C2" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 9450 2175 50  0001 C CNN
+F 1 "GND" H 9455 2252 50  0000 C CNN
+F 2 "" H 9450 2425 50  0001 C CNN
+F 3 "" H 9450 2425 50  0001 C CNN
+	1    9450 2425
+	1    0    0    -1  
+$EndComp
+Text GLabel 6550 1500 0    30   Input ~ 0
+SD1_~CS
+Wire Wire Line
+	7525 1500 6675 1500
+Text GLabel 6625 1600 0    30   Input ~ 0
+SPI3_MOSI
+Wire Wire Line
+	6625 1600 7525 1600
+$Comp
+L Device:R R?
+U 1 1 5C38F8CC
+P 6675 1325
+AR Path="/5C38F8CC" Ref="R?"  Part="1" 
+AR Path="/5C38EC7F/5C38F8CC" Ref="R?"  Part="1" 
+F 0 "R?" H 6745 1371 50  0000 L CNN
+F 1 "10k" H 6745 1280 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6605 1325 50  0001 C CNN
+F 3 "~" H 6675 1325 50  0001 C CNN
+	1    6675 1325
+	1    0    0    -1  
+$EndComp
+Connection ~ 6675 1175
+Wire Wire Line
+	6675 1175 6900 1175
+Wire Wire Line
+	6675 1475 6675 1500
+Connection ~ 6675 1500
+Wire Wire Line
+	6675 1500 6550 1500
+Text GLabel 6625 1800 0    30   Input ~ 0
+SPI13_SCK
+Wire Wire Line
+	7525 1800 6625 1800
+Text GLabel 6575 2000 0    30   Input ~ 0
+SPI3_MISO
+Wire Wire Line
+	6575 2000 7525 2000
+NoConn ~ 7525 2100
+NoConn ~ 7525 1400
+$Comp
+L SensorBoard:MS5607-02BA U?
+U 1 1 5C38FBCF
+P 2425 2050
+F 0 "U?" H 3475 2050 50  0000 C CNN
+F 1 "MS5607-02BA" H 2775 2450 50  0000 C CNN
+F 2 "SensorBoard:MS5607-02BA03" H 2425 2050 50  0001 C CNN
+F 3 "" H 2425 2050 50  0001 C CNN
+	1    2425 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1975 1600 1875 1600
+Wire Wire Line
+	1500 1600 1500 1125
+Wire Wire Line
+	1975 1450 1875 1450
+Wire Wire Line
+	1875 1450 1875 1600
+Connection ~ 1875 1600
+Wire Wire Line
+	1875 1600 1500 1600
+Wire Wire Line
+	1975 1750 1875 1750
+Wire Wire Line
+	1875 1750 1875 1600
+$Comp
+L Device:C C?
+U 1 1 5C38FBDE
+P 1500 1800
+F 0 "C?" H 1615 1846 50  0000 L CNN
+F 1 "100n" H 1615 1755 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 1538 1650 50  0001 C CNN
+F 3 "~" H 1500 1800 50  0001 C CNN
+	1    1500 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1500 1650 1500 1600
+Connection ~ 1500 1600
+Wire Wire Line
+	1500 1950 1875 1950
+Wire Wire Line
+	1875 1950 1875 1900
+Wire Wire Line
+	1875 1900 1975 1900
+Text Label 1500 1125 0    50   ~ 0
++3.3V
+$Comp
+L SensorBoard:BMF055 U?
+U 1 1 5C38FBEB
+P 3275 4925
+F 0 "U?" H 3800 4025 50  0000 L CNN
+F 1 "BMF055" H 3050 4750 50  0000 L CNN
+F 2 "SensorBoard:BMF055" H 3275 4925 50  0001 C CNN
+F 3 "" H 3275 4925 50  0001 C CNN
+	1    3275 4925
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5C38FBF2
+P 2775 3925
+F 0 "C?" V 2523 3925 50  0000 C CNN
+F 1 "120n" V 2614 3925 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2813 3775 50  0001 C CNN
+F 3 "~" H 2775 3925 50  0001 C CNN
+	1    2775 3925
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5C38FBF9
+P 2775 3525
+F 0 "C?" V 2523 3525 50  0000 C CNN
+F 1 "6.8n" V 2614 3525 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2813 3375 50  0001 C CNN
+F 3 "~" H 2775 3525 50  0001 C CNN
+	1    2775 3525
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1725 3425 1725 5025
+Wire Wire Line
+	2625 3525 2425 3525
+Connection ~ 1625 3525
+Wire Wire Line
+	1625 3525 1625 5900
+Wire Wire Line
+	2425 3525 2425 3925
+Wire Wire Line
+	2425 3925 2625 3925
+Connection ~ 2425 3525
+Wire Wire Line
+	2425 3525 1625 3525
+Wire Wire Line
+	2425 3925 2425 4175
+Wire Wire Line
+	2425 4175 2775 4175
+Wire Wire Line
+	2775 4175 2775 4375
+Connection ~ 2425 3925
+Wire Wire Line
+	1725 5025 2075 5025
+$Comp
+L Device:C C?
+U 1 1 5C38FC0D
+P 2075 4775
+F 0 "C?" H 2190 4821 50  0000 L CNN
+F 1 "100n" H 2190 4730 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2113 4625 50  0001 C CNN
+F 3 "~" H 2075 4775 50  0001 C CNN
+	1    2075 4775
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2075 4925 2075 5025
+Connection ~ 2075 5025
+Wire Wire Line
+	2075 5025 2475 5025
+Wire Wire Line
+	2925 3925 4425 3925
+Wire Wire Line
+	4425 3925 4425 6175
+Wire Wire Line
+	4425 6175 3700 6175
+Wire Wire Line
+	2325 6175 2325 4875
+Wire Wire Line
+	2325 4875 2475 4875
+Wire Wire Line
+	2325 4875 2325 4425
+Wire Wire Line
+	2325 4425 2075 4425
+Wire Wire Line
+	2075 4425 2075 4625
+Connection ~ 2325 4875
+$Comp
+L Device:C C?
+U 1 1 5C38FC20
+P 2975 6025
+F 0 "C?" H 3090 6071 50  0000 L CNN
+F 1 "100n" H 3090 5980 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3013 5875 50  0001 C CNN
+F 3 "~" H 2975 6025 50  0001 C CNN
+	1    2975 6025
+	1    0    0    -1  
+$EndComp
+Connection ~ 2975 6175
+Wire Wire Line
+	2975 6175 2325 6175
+Wire Wire Line
+	3225 5875 3225 6325
+Wire Wire Line
+	1625 6325 3225 6325
+Wire Wire Line
+	3125 4375 3125 3525
+Wire Wire Line
+	3125 3525 2925 3525
+$Comp
+L Device:R R?
+U 1 1 5C38FC2D
+P 1625 6050
+F 0 "R?" H 1695 6096 50  0000 L CNN
+F 1 "10k" H 1695 6005 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1555 6050 50  0001 C CNN
+F 3 "~" H 1625 6050 50  0001 C CNN
+	1    1625 6050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1625 6200 1625 6325
+$Comp
+L power:GND #PWR?
+U 1 1 5C38FC35
+P 3700 6175
+F 0 "#PWR?" H 3700 5925 50  0001 C CNN
+F 1 "GND" H 3705 6002 50  0000 C CNN
+F 2 "" H 3700 6175 50  0001 C CNN
+F 3 "" H 3700 6175 50  0001 C CNN
+	1    3700 6175
+	1    0    0    -1  
+$EndComp
+Connection ~ 3700 6175
+Wire Wire Line
+	3700 6175 2975 6175
+Text Notes 2600 1200 0    50   ~ 0
+MS560702BA03-50 (Barometer)\n\n
+Text Notes 2775 3050 0    50   ~ 0
+BMF055 (IMU)
+Text Label 1625 3275 0    50   ~ 0
++1.45V
+Wire Wire Line
+	1625 3275 1625 3525
+Text Label 1725 3425 0    50   ~ 0
++3.3V
+Text GLabel 3625 1800 2    50   Input ~ 0
+SPI2_SCK
+Text GLabel 3625 1500 2    50   Input ~ 0
+SPI2_MOSI
+Text GLabel 3625 1650 2    50   Input ~ 0
+SPI2_MISO
+Text GLabel 1975 1350 0    50   Input ~ 0
+BARO_~CS
+$EndSCHEMATC
